@@ -3,12 +3,20 @@
  */
 package com.github.javezki;
 
+import org.bukkit.plugin.java.JavaPlugin;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+    
+    public static JavaPlugin plugin;
+
+    public static JavaPlugin getJavaPlugin() {
+        return plugin;
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    public static void setPlugin(final JavaPlugin plugin){
+        App.plugin = plugin;
+
     }
+
+
 }
